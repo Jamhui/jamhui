@@ -6,9 +6,10 @@
     <meta charset="utf-8">
     <meta name="keywords" content="hexo撰写文章, jamhuiBlog">
     <meta name="description" content="博客搭建完了,这篇文章讲述如何撰写文章
-创建文章在站点文件夹中打开git bash，输入如下命令创建文章，其中title为文章的标题hexo new &#39;title&#39;
+创建文章 在站点文件夹中打开git bash，输入如下命令创建文章，其中title为文章的标题
+hexo new &#39;title&#39;
 
-这时就会在source/_post目录中创建一个文件: title.md">
+这时就会在source/_post目录中创建一个文件: title.">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -362,11 +363,13 @@
         <div class="card-content article-card-content">
             <div id="articleContent">
                 <p>博客搭建完了,这篇文章讲述如何撰写文章</p>
-<h2 id="创建文章"><a href="#创建文章" class="headerlink" title="创建文章"></a>创建文章</h2><h4 id="在站点文件夹中打开git-bash，输入如下命令创建文章，其中title为文章的标题"><a href="#在站点文件夹中打开git-bash，输入如下命令创建文章，其中title为文章的标题" class="headerlink" title="在站点文件夹中打开git bash，输入如下命令创建文章，其中title为文章的标题"></a>在站点文件夹中打开git bash，输入如下命令创建文章，其中title为文章的标题</h4><pre class="line-numbers language-bash"><code class="language-bash">hexo new <span class="token string">'title'</span>
+<h2 id="创建文章"><a href="#创建文章" class="headerlink" title="创建文章"></a>创建文章</h2><p> 在站点文件夹中打开git bash，输入如下命令创建文章，其中title为文章的标题</p>
+<pre class="line-numbers language-bash"><code class="language-bash">hexo new <span class="token string">'title'</span>
 <span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-<h4 id="这时就会在source-post目录中创建一个文件-title-md-我们所要发布的文章都是放在当前文件里"><a href="#这时就会在source-post目录中创建一个文件-title-md-我们所要发布的文章都是放在当前文件里" class="headerlink" title="这时就会在source/_post目录中创建一个文件: title.md,我们所要发布的文章都是放在当前文件里"></a>这时就会在source/_post目录中创建一个文件: title.md,我们所要发布的文章都是放在当前文件里</h4><h4 id="这时就涉及到书写的语法-接下来就开始学习撰写文章的语法–Markdown"><a href="#这时就涉及到书写的语法-接下来就开始学习撰写文章的语法–Markdown" class="headerlink" title="这时就涉及到书写的语法,接下来就开始学习撰写文章的语法–Markdown"></a>这时就涉及到书写的语法,接下来就开始学习撰写文章的语法–Markdown</h4><h2 id="编写文章（基于Markdown）"><a href="#编写文章（基于Markdown）" class="headerlink" title="编写文章（基于Markdown）"></a>编写文章（基于Markdown）</h2><h3 id="1-Markdown简介"><a href="#1-Markdown简介" class="headerlink" title="1.Markdown简介"></a>1.Markdown简介</h3><h4 id="但是在我们正式写下我们文章的第一个文字时，我们需要了解一下什么是-Markdown："><a href="#但是在我们正式写下我们文章的第一个文字时，我们需要了解一下什么是-Markdown：" class="headerlink" title="但是在我们正式写下我们文章的第一个文字时，我们需要了解一下什么是 Markdown："></a>但是在我们正式写下我们文章的第一个文字时，我们需要了解一下什么是 Markdown：</h4><pre class="line-numbers language-bash"><code class="language-bash">Markdown是一种可以使用普通文本编辑器编写的标记语言，通过简单的标记语法，它可以使普通文本内容具有一定的格式
+<p>这时就会在source/_post目录中创建一个文件: title.md,我们所要发布的文章都是放在当前文件里<br>这时就涉及到书写的语法,接下来就开始学习撰写文章的语法–Markdown</p>
+<h2 id="编写文章（基于Markdown）"><a href="#编写文章（基于Markdown）" class="headerlink" title="编写文章（基于Markdown）"></a>编写文章（基于Markdown）</h2><h3 id="1-Markdown简介"><a href="#1-Markdown简介" class="headerlink" title="1.Markdown简介"></a>1.Markdown简介</h3><h5 id="但是在我们正式写下我们文章的第一个文字时，我们需要了解一下什么是Markdown："><a href="#但是在我们正式写下我们文章的第一个文字时，我们需要了解一下什么是Markdown：" class="headerlink" title="但是在我们正式写下我们文章的第一个文字时，我们需要了解一下什么是Markdown："></a>但是在我们正式写下我们文章的第一个文字时，我们需要了解一下什么是Markdown：</h5><pre class="line-numbers language-bash"><code class="language-bash">Markdown是一种可以使用普通文本编辑器编写的标记语言，通过简单的标记语法，它可以使普通文本内容具有一定的格式
 <span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-<h4 id="基于Markdown的简洁性，它已经成为了目前世界上最流行的用于书写博客的语言。"><a href="#基于Markdown的简洁性，它已经成为了目前世界上最流行的用于书写博客的语言。" class="headerlink" title="基于Markdown的简洁性，它已经成为了目前世界上最流行的用于书写博客的语言。"></a>基于Markdown的简洁性，它已经成为了目前世界上最流行的用于书写博客的语言。</h4><h3 id="2-Markdown语法"><a href="#2-Markdown语法" class="headerlink" title="2.Markdown语法"></a>2.Markdown语法</h3><h4 id="1-标题"><a href="#1-标题" class="headerlink" title="1.标题"></a>1.标题</h4><pre class="line-numbers language-bash"><code class="language-bash"><span class="token comment" spellcheck="true"># 一级标题</span>
+<h5 id="基于Markdown的简洁性，它已经成为了目前世界上最流行的用于书写博客的语言。"><a href="#基于Markdown的简洁性，它已经成为了目前世界上最流行的用于书写博客的语言。" class="headerlink" title="基于Markdown的简洁性，它已经成为了目前世界上最流行的用于书写博客的语言。"></a>基于Markdown的简洁性，它已经成为了目前世界上最流行的用于书写博客的语言。</h5><h3 id="2-Markdown语法"><a href="#2-Markdown语法" class="headerlink" title="2.Markdown语法"></a>2.Markdown语法</h3><h4 id="1-标题"><a href="#1-标题" class="headerlink" title="1.标题"></a>1.标题</h4><pre class="line-numbers language-bash"><code class="language-bash"><span class="token comment" spellcheck="true"># 一级标题</span>
 <span class="token comment" spellcheck="true">## 二级标题</span>
 <span class="token comment" spellcheck="true">### 三级标题</span>
 <span class="token comment" spellcheck="true">#### 四级标题</span>
@@ -380,11 +383,13 @@
 <span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
 <h4 id="3-引用块"><a href="#3-引用块" class="headerlink" title="3.引用块"></a>3.引用块</h4><pre class="line-numbers language-bash"><code class="language-bash"><span class="token operator">></span> 文字引用
 <span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-<h4 id="4-代码块"><a href="#4-代码块" class="headerlink" title="4.代码块"></a>4.代码块</h4><p>$ <code>bash
-$ `行内代码`
+<h4 id="4-代码块"><a href="#4-代码块" class="headerlink" title="4.代码块"></a>4.代码块</h4><pre class="line-numbers language-bash"><code class="language-bash">$ <span class="token variable"><span class="token variable">`</span>行内代码<span class="token variable">`</span></span>
 $ 
-$ ​</code><br>$ 多行代码<br>$ 多行代码<br>$ ​<code>`</code></p>
-<pre><code>#### 5.公式块
+$ ​
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+<p>$ 多行代码<br>$ 多行代码<br>$ ​<code>`</code></p>
+<pre><code>
+#### 5.公式块
 ``` bash
 $$
 数学公式
@@ -428,7 +433,7 @@ tags: <span class="token punctuation">[</span>tag1, tag2, <span class="token pun
 categories: category
 <span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
 <p><strong><em> 注意，属性和属性值之间必须有一个空格，否则会解析错误 </em></strong></p>
-<h4 id="3-首页显示"><a href="#3-首页显示" class="headerlink" title="3.首页显示"></a>3.首页显示</h4><p>在 Hexo 框架搭建的博客网站首页会显示文章的内容（默认显示文章的全部内容），如果当文章太长的时候就会显得十分冗余，所以我们有必要对其进行精简，只需在文章中使用<strong> <a id="more"></a> </strong>标志，表示只会显示标志前面的内容</p>
+<h4 id="3-首页显示"><a href="#3-首页显示" class="headerlink" title="3.首页显示"></a>3.首页显示</h4><p>在 Hexo 框架搭建的博客网站首页会显示文章的内容（默认显示文章的全部内容），如果当文章太长的时候就会显得十分冗余，所以我们有必要对其进行精简，只需在文章中使用<a id="more"></a>标志，表示只会显示标志前面的内容</p>
 
             </div>
             <hr>
@@ -632,9 +637,10 @@ categories: category
                 </a>
                 <div class="card-content article-content">
                     <div class="summary">博客搭建完了,这篇文章讲述如何撰写文章
-创建文章在站点文件夹中打开git bash，输入如下命令创建文章，其中title为文章的标题hexo new 'title'
+创建文章 在站点文件夹中打开git bash，输入如下命令创建文章，其中title为文章的标题
+hexo new 'title'
 
-这时就会在source/_post目录中创建一个文件: title.md</div>
+这时就会在source/_post目录中创建一个文件: title.</div>
                     <div class="publish-info">
                             <span class="publish-date">
                                 <i class="fa fa-clock-o fa-fw icon-date"></i>2019-02-22
