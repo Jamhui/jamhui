@@ -4,9 +4,11 @@
 
 <head><meta name="generator" content="Hexo 3.8.0">
     <meta charset="utf-8">
-    <meta name="keywords" content="hexo使用-linux搭建, jamhuiBlog">
-    <meta name="description" content="对于第一次搭建个人博客hexo的笔记
-环境要求GitNodeJs先安装了Git 和 NodeJS (推荐使用cnpm)Git安装教程Nodejs安装教程cnpm使用教程开始搭建1.安装Hexo打开 shell 终端，输入命令：npm ins">
+    <meta name="keywords" content="hexo撰写文章, jamhuiBlog">
+    <meta name="description" content="博客搭建完了,这篇文章讲述如何撰写文章
+创建文章在站点文件夹中打开git bash，输入如下命令创建文章，其中title为文章的标题hexo new &#39;title&#39;
+
+这时就会在source/_post目录中创建一个文件: title.md">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -14,7 +16,7 @@
     <meta name="format-detection" content="telephone=no">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-    <title>hexo使用-linux搭建 | jamhuiBlog</title>
+    <title>hexo撰写文章 | jamhuiBlog</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/font-awesome.min.css">
@@ -217,13 +219,13 @@
 
 
 
-<div class="bg-cover post-cover" style="background-image: url('/medias/featureimages/7.jpg')">
+<div class="bg-cover post-cover" style="background-image: url('/medias/featureimages/6.jpg')">
     <div class="container">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
                     <div class="description center-align post-title">
-                        hexo使用-linux搭建
+                        hexo撰写文章
                     </div>
                 </div>
             </div>
@@ -319,6 +321,10 @@
                                 <span class="chip bg-color">hexo</span>
                             </a>
                         
+                            <a href="/tags/markdown/" target="_blank">
+                                <span class="chip bg-color">markdown</span>
+                            </a>
+                        
                     </div>
                     
                 </div>
@@ -355,17 +361,74 @@
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <p>对于第一次搭建个人博客hexo的笔记</p>
-<h2 id="环境要求"><a href="#环境要求" class="headerlink" title="环境要求"></a>环境要求</h2><h3 id="Git"><a href="#Git" class="headerlink" title="Git"></a>Git</h3><h3 id="NodeJs"><a href="#NodeJs" class="headerlink" title="NodeJs"></a>NodeJs</h3><h4 id="先安装了Git-和-NodeJS-推荐使用cnpm"><a href="#先安装了Git-和-NodeJS-推荐使用cnpm" class="headerlink" title="先安装了Git 和 NodeJS (推荐使用cnpm)"></a>先安装了Git 和 NodeJS (推荐使用cnpm)</h4><h4 id="Git安装教程"><a href="#Git安装教程" class="headerlink" title="Git安装教程"></a><a href="https://www.liaoxuefeng.com/wiki/0013739516305929606dd18361248578c67b8067c8c017b000/00137396287703354d8c6c01c904c7d9ff056ae23da865a000" target="_blank" rel="noopener">Git安装教程</a></h4><h4 id="Nodejs安装教程"><a href="#Nodejs安装教程" class="headerlink" title="Nodejs安装教程"></a><a href="https://www.runoob.com/nodejs/nodejs-install-setup.html" target="_blank" rel="noopener">Nodejs安装教程</a></h4><h4 id="cnpm使用教程"><a href="#cnpm使用教程" class="headerlink" title="cnpm使用教程"></a><a href="https://xiuxiuing.gitee.io/blog/2018/08/25/cnpm/" target="_blank" rel="noopener">cnpm使用教程</a></h4><h2 id="开始搭建"><a href="#开始搭建" class="headerlink" title="开始搭建"></a>开始搭建</h2><h3 id="1-安装Hexo"><a href="#1-安装Hexo" class="headerlink" title="1.安装Hexo"></a>1.安装Hexo</h3><h4 id="打开-shell-终端，输入命令："><a href="#打开-shell-终端，输入命令：" class="headerlink" title="打开 shell 终端，输入命令："></a>打开 shell 终端，输入命令：</h4><pre class="line-numbers language-bash"><code class="language-bash"><span class="token function">npm</span> <span class="token function">install</span> -g hexo
+                <p>博客搭建完了,这篇文章讲述如何撰写文章</p>
+<h2 id="创建文章"><a href="#创建文章" class="headerlink" title="创建文章"></a>创建文章</h2><h4 id="在站点文件夹中打开git-bash，输入如下命令创建文章，其中title为文章的标题"><a href="#在站点文件夹中打开git-bash，输入如下命令创建文章，其中title为文章的标题" class="headerlink" title="在站点文件夹中打开git bash，输入如下命令创建文章，其中title为文章的标题"></a>在站点文件夹中打开git bash，输入如下命令创建文章，其中title为文章的标题</h4><pre class="line-numbers language-bash"><code class="language-bash">hexo new <span class="token string">'title'</span>
 <span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-<h3 id="2-初始化Hexo"><a href="#2-初始化Hexo" class="headerlink" title="2.初始化Hexo"></a>2.初始化Hexo</h3><h4 id="在系统里新建存放hexo项目的文件夹-并进入到该文件夹-输入命令"><a href="#在系统里新建存放hexo项目的文件夹-并进入到该文件夹-输入命令" class="headerlink" title="在系统里新建存放hexo项目的文件夹,并进入到该文件夹,输入命令:"></a>在系统里新建存放hexo项目的文件夹,并进入到该文件夹,输入命令:</h4><pre class="line-numbers language-bash"><code class="language-bash">hexo init
+<h4 id="这时就会在source-post目录中创建一个文件-title-md-我们所要发布的文章都是放在当前文件里"><a href="#这时就会在source-post目录中创建一个文件-title-md-我们所要发布的文章都是放在当前文件里" class="headerlink" title="这时就会在source/_post目录中创建一个文件: title.md,我们所要发布的文章都是放在当前文件里"></a>这时就会在source/_post目录中创建一个文件: title.md,我们所要发布的文章都是放在当前文件里</h4><h4 id="这时就涉及到书写的语法-接下来就开始学习撰写文章的语法–Markdown"><a href="#这时就涉及到书写的语法-接下来就开始学习撰写文章的语法–Markdown" class="headerlink" title="这时就涉及到书写的语法,接下来就开始学习撰写文章的语法–Markdown"></a>这时就涉及到书写的语法,接下来就开始学习撰写文章的语法–Markdown</h4><h2 id="编写文章（基于Markdown）"><a href="#编写文章（基于Markdown）" class="headerlink" title="编写文章（基于Markdown）"></a>编写文章（基于Markdown）</h2><h3 id="1-Markdown简介"><a href="#1-Markdown简介" class="headerlink" title="1.Markdown简介"></a>1.Markdown简介</h3><h4 id="但是在我们正式写下我们文章的第一个文字时，我们需要了解一下什么是-Markdown："><a href="#但是在我们正式写下我们文章的第一个文字时，我们需要了解一下什么是-Markdown：" class="headerlink" title="但是在我们正式写下我们文章的第一个文字时，我们需要了解一下什么是 Markdown："></a>但是在我们正式写下我们文章的第一个文字时，我们需要了解一下什么是 Markdown：</h4><pre class="line-numbers language-bash"><code class="language-bash">Markdown是一种可以使用普通文本编辑器编写的标记语言，通过简单的标记语法，它可以使普通文本内容具有一定的格式
 <span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-<h4 id="生成文件目录"><a href="#生成文件目录" class="headerlink" title="生成文件目录"></a>生成文件目录</h4><p><img src="https://mmbiz.qpic.cn/mmbiz_jpg/y5HvXaQmpqmSnicMth2qGGcwwULQodPrf2J9JksibnOTpsVNc1kib7g9MDFibXYyCN7q7nggLX9LuF4Z6seQjAvN5A/640?wx_fmt=jpeg&amp;tp=webp&amp;wxfrom=5&amp;wx_lazy=1&amp;wx_co=1" alt="文件目录"></p>
-<h3 id="3-本地预览博客"><a href="#3-本地预览博客" class="headerlink" title="3.本地预览博客"></a>3.本地预览博客</h3><h4 id="编译项目，输入命令："><a href="#编译项目，输入命令：" class="headerlink" title="编译项目，输入命令："></a>编译项目，输入命令：</h4><pre class="line-numbers language-bash"><code class="language-bash">hexo g
+<h4 id="基于Markdown的简洁性，它已经成为了目前世界上最流行的用于书写博客的语言。"><a href="#基于Markdown的简洁性，它已经成为了目前世界上最流行的用于书写博客的语言。" class="headerlink" title="基于Markdown的简洁性，它已经成为了目前世界上最流行的用于书写博客的语言。"></a>基于Markdown的简洁性，它已经成为了目前世界上最流行的用于书写博客的语言。</h4><h3 id="2-Markdown语法"><a href="#2-Markdown语法" class="headerlink" title="2.Markdown语法"></a>2.Markdown语法</h3><h4 id="1-标题"><a href="#1-标题" class="headerlink" title="1.标题"></a>1.标题</h4><pre class="line-numbers language-bash"><code class="language-bash"><span class="token comment" spellcheck="true"># 一级标题</span>
+<span class="token comment" spellcheck="true">## 二级标题</span>
+<span class="token comment" spellcheck="true">### 三级标题</span>
+<span class="token comment" spellcheck="true">#### 四级标题</span>
+<span class="token comment" spellcheck="true">##### 五级标题</span>
+<span class="token comment" spellcheck="true">###### 六级标题</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<h4 id="2-粗体、斜体、删除线和下划线"><a href="#2-粗体、斜体、删除线和下划线" class="headerlink" title="2.粗体、斜体、删除线和下划线"></a>2.粗体、斜体、删除线和下划线</h4><pre class="line-numbers language-bash"><code class="language-bash">*斜体*
+**粗体**
+***加粗斜体***
+~~删除线~~
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
+<h4 id="3-引用块"><a href="#3-引用块" class="headerlink" title="3.引用块"></a>3.引用块</h4><pre class="line-numbers language-bash"><code class="language-bash"><span class="token operator">></span> 文字引用
 <span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-<h4 id="运行项目，输入命令："><a href="#运行项目，输入命令：" class="headerlink" title="运行项目，输入命令："></a>运行项目，输入命令：</h4><pre class="line-numbers language-bash"><code class="language-bash">hexo s
-<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-<p>在浏览器中输入ip:4000/`就可以看到效果啦</p>
+<h4 id="4-代码块"><a href="#4-代码块" class="headerlink" title="4.代码块"></a>4.代码块</h4><p>$ <code>bash
+$ `行内代码`
+$ 
+$ ​</code><br>$ 多行代码<br>$ 多行代码<br>$ ​<code>`</code></p>
+<pre><code>#### 5.公式块
+``` bash
+$$
+数学公式
+$$
+</code></pre><h4 id="6-分割线"><a href="#6-分割线" class="headerlink" title="6.分割线"></a>6.分割线</h4><pre class="line-numbers language-bash"><code class="language-bash">方法一：---
+
+方法二：+++
+
+方法三：***
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<h4 id="7-列表"><a href="#7-列表" class="headerlink" title="7.列表"></a>7.列表</h4><pre class="line-numbers language-bash"><code class="language-bash">1. 有序列表项
+
+* 无序列表项
+
++ 无序列表项
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<h4 id="8-表格"><a href="#8-表格" class="headerlink" title="8.表格"></a>8.表格</h4><pre class="line-numbers language-bash"><code class="language-bash">表头1<span class="token operator">|</span>表头2
+-<span class="token operator">|</span>-<span class="token operator">|</span>-
+内容11<span class="token operator">|</span>内容12
+内容21<span class="token operator">|</span>内容22
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
+<h4 id="9-超链接"><a href="#9-超链接" class="headerlink" title="9.超链接"></a>9.超链接</h4><pre class="line-numbers language-bash"><code class="language-bash">方法一：<span class="token punctuation">[</span>链接文字<span class="token punctuation">]</span><span class="token punctuation">(</span>链接地址 <span class="token string">"链接描述"</span><span class="token punctuation">)</span>
+例如：<span class="token punctuation">[</span>我的博客<span class="token punctuation">]</span><span class="token punctuation">(</span>https://jamhui.gitee.io <span class="token string">"我的博客"</span><span class="token punctuation">)</span>
+
+方法二：<span class="token operator">&lt;</span>链接地址<span class="token operator">></span>
+例如：<span class="token operator">&lt;</span>https://jamhui.gitee.io<span class="token operator">></span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<h4 id="10-图片"><a href="#10-图片" class="headerlink" title="10.图片"></a>10.图片</h4><pre class="line-numbers language-bash"><code class="language-bash"><span class="token operator">!</span><span class="token punctuation">[</span>图片文字<span class="token punctuation">]</span> <span class="token punctuation">(</span>图片地址 <span class="token string">"图片描述"</span><span class="token punctuation">)</span>
+例如：<span class="token operator">!</span><span class="token punctuation">[</span>示例图片<span class="token punctuation">]</span> <span class="token punctuation">(</span>https://www.example.com/example.PNG <span class="token string">"示例图片"</span><span class="token punctuation">)</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+<h3 id="3-Markdown高级语法"><a href="#3-Markdown高级语法" class="headerlink" title="3.Markdown高级语法"></a>3.Markdown高级语法</h3><h4 id="1-模板设置"><a href="#1-模板设置" class="headerlink" title="1.模板设置"></a>1.模板设置</h4><p>当我们使用命令 hexo new “title” 去创建我们的文章时，Hexo 会根据 /scaffolds/post.md 文件对新建文件进行初始化，换言之，/scaffolds/post.md 文件就是创建新文章的模板，所以我们可以修改它来适应自己的写作习惯，一个简单的示例如下：</p>
+<pre class="line-numbers language-bash"><code class="language-bash">title: <span class="token punctuation">{</span><span class="token punctuation">{</span> title <span class="token punctuation">}</span><span class="token punctuation">}</span>
+date: <span class="token punctuation">{</span><span class="token punctuation">{</span> <span class="token function">date</span> <span class="token punctuation">}</span><span class="token punctuation">}</span>
+tags: 
+categories: 
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
+<h4 id="2-头部设置"><a href="#2-头部设置" class="headerlink" title="2.头部设置"></a>2.头部设置</h4><p>在每一篇博客文章的开头都会有对文章的说明文字，叫做 文章头部，文章的头部除了可以设置文章标题、发布日期等基础信息外，还可以对文章添加标签、分类等，一个简单的示例如下</p>
+<pre class="line-numbers language-bash"><code class="language-bash">title: Title
+date: YYYY-MM-DD HH:MM:SS
+tags: <span class="token punctuation">[</span>tag1, tag2, <span class="token punctuation">..</span>.<span class="token punctuation">]</span>
+categories: category
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
+<p><strong><em> 注意，属性和属性值之间必须有一个空格，否则会解析错误 </em></strong></p>
+<h4 id="3-首页显示"><a href="#3-首页显示" class="headerlink" title="3.首页显示"></a>3.首页显示</h4><p>在 Hexo 框架搭建的博客网站首页会显示文章的内容（默认显示文章的全部内容），如果当文章太长的时候就会显得十分冗余，所以我们有必要对其进行精简，只需在文章中使用<strong> <a id="more"></a> </strong>标志，表示只会显示标志前面的内容</p>
 
             </div>
             <hr>
@@ -507,7 +570,7 @@
                     </span>
                     <a href="https://jamhui.gitee.io" class="b-link-green">jamhuiBlog</a>
                     <i class="fa fa-angle-right fa-lg fa-fw text-color"></i>
-                    <a href="/2019/02/22/hexo/" class="b-link-green">hexo使用-linux搭建</a>
+                    <a href="/2019/02/22/markdown/" class="b-link-green">hexo撰写文章</a>
                 </p>
             </div>
         </div>
@@ -528,9 +591,9 @@
 
 <script type="text/javascript">
     disqus_config = function () {
-        this.page.url = 'https://jamhui.gitee.io/2019/02/22/hexo/';
-        this.page.identifier = '/2019/02/22/hexo/';
-        this.page.title = 'hexo使用-linux搭建';
+        this.page.url = 'https://jamhui.gitee.io/2019/02/22/markdown/';
+        this.page.identifier = '/2019/02/22/markdown/';
+        this.page.title = 'hexo撰写文章';
     };
     let disqus_shortname = '';
 
@@ -555,7 +618,8 @@
         
         <div class="article col s12 m6" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fa fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="fa fa-dot-circle-o"></i>&nbsp;本篇
+            </div>
             <div class="card">
                 <a href="/2019/02/22/markdown/">
                     <div class="card-image">
@@ -572,9 +636,9 @@
 
 这时就会在source/_post目录中创建一个文件: title.md</div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="fa fa-clock-o fa-fw icon-date"></i>2019-02-22
-                        </span>
+                            <span class="publish-date">
+                                <i class="fa fa-clock-o fa-fw icon-date"></i>2019-02-22
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fa fa-bookmark fa-fw icon-category"></i>
@@ -587,6 +651,7 @@
                         </span>
                     </div>
                 </div>
+
                 
                 <div class="card-action article-tags">
                     
@@ -609,28 +674,41 @@
                 下一篇&nbsp;<i class="fa fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2019/02/21/hello-world/">
+                <a href="/2019/02/22/hexo/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/12.jpg" class="responsive-img" alt="Hello World">
+                        <img src="/medias/featureimages/7.jpg" class="responsive-img" alt="hexo使用-linux搭建">
                         
-                        <span class="card-title">Hello World</span>
+                        <span class="card-title">hexo使用-linux搭建</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
-                    <div class="summary">Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hex</div>
+                    <div class="summary">对于第一次搭建个人博客hexo的笔记
+环境要求GitNodeJs先安装了Git 和 NodeJS (推荐使用cnpm)Git安装教程Nodejs安装教程cnpm使用教程开始搭建1.安装Hexo打开 shell 终端，输入命令：npm ins</div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="fa fa-clock-o fa-fw icon-date"></i>2019-02-21
+                                <i class="fa fa-clock-o fa-fw icon-date"></i>2019-02-22
                             </span>
                         <span class="publish-author">
                             
-                            <i class="fa fa-user fa-fw"></i>
-                            jamhui
+                            <i class="fa fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/hexo/" class="post-category" target="_blank">
+                                    hexo
+                                </a>
+                            
                             
                         </span>
                     </div>
+                </div>
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/hexo/" target="_blank">
+                        <span class="chip bg-color">hexo</span>
+                    </a>
+                    
                 </div>
                 
             </div>
