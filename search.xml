@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<search> 
+  
+  
+    
+    <entry>
+      <title>spring源码下载及导入Intellij</title>
+      <link href="/2019/02/28/spring%E6%BA%90%E7%A0%81%E4%B8%8B%E8%BD%BD%E5%8F%8A%E5%AF%BC%E5%85%A5Intellij/"/>
+      <url>/2019/02/28/spring%E6%BA%90%E7%A0%81%E4%B8%8B%E8%BD%BD%E5%8F%8A%E5%AF%BC%E5%85%A5Intellij/</url>
+      
+        <content type="html"><![CDATA[<h3 id="1-去git上下载spring-framework"><a href="#1-去git上下载spring-framework" class="headerlink" title="1.去git上下载spring-framework:"></a>1.去git上<a href="https://github.com/spring-projects/spring-framework" target="_blank" rel="noopener">下载</a>spring-framework:</h3><pre class="line-numbers language-bash"><code class="language-bash"><span class="token function">git</span> clone https://github.com/spring-projects/spring-framework.git<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><h4 id="由于网络原因-据说需要科学上网-没下载成功-但通过download-zip方式下载成功-如图"><a href="#由于网络原因-据说需要科学上网-没下载成功-但通过download-zip方式下载成功-如图" class="headerlink" title="由于网络原因(据说需要科学上网),没下载成功,但通过download zip方式下载成功,如图:"></a>由于网络原因(据说需要科学上网),没下载成功,但通过download zip方式下载成功,如图:</h4><p><img src="/image/spring_download.png" alt></p><h3 id="2-配置gradle-已配置的跳过"><a href="#2-配置gradle-已配置的跳过" class="headerlink" title="2.配置gradle(已配置的跳过)"></a>2.配置gradle(已配置的跳过)</h3><h4 id="2-1由于源码采用gradle编译-没装gradle点击下载最新gradle"><a href="#2-1由于源码采用gradle编译-没装gradle点击下载最新gradle" class="headerlink" title="2.1由于源码采用gradle编译,没装gradle点击下载最新gradle"></a>2.1由于源码采用gradle编译,没装gradle点击<a href="https://gradle.org/releases/" target="_blank" rel="noopener">下载最新gradle</a></h4><h4 id="2-2配置环境变量GRADLE-HOME-path添加-GRADLE-HOME-bin"><a href="#2-2配置环境变量GRADLE-HOME-path添加-GRADLE-HOME-bin" class="headerlink" title="2.2配置环境变量GRADLE_HOME,path添加%GRADLE_HOME%\bin"></a>2.2配置环境变量GRADLE_HOME,path添加%GRADLE_HOME%\bin</h4><h4 id="2-3cmd测试"><a href="#2-3cmd测试" class="headerlink" title="2.3cmd测试"></a>2.3cmd测试</h4><pre class="line-numbers language-bash"><code class="language-bash">gradle -v<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><h4 id="2-4intellij配置gradle-如图"><a href="#2-4intellij配置gradle-如图" class="headerlink" title="2.4intellij配置gradle,如图:"></a>2.4intellij配置gradle,如图:</h4><p><img src="/image/intellij_gradle.png" alt></p><h3 id="3-接下来就要开始导入源码进入intellij-直接找到项目的build-gradle导入即可-等待gradle编译"><a href="#3-接下来就要开始导入源码进入intellij-直接找到项目的build-gradle导入即可-等待gradle编译" class="headerlink" title="3.接下来就要开始导入源码进入intellij,直接找到项目的build.gradle导入即可,等待gradle编译"></a>3.接下来就要开始导入源码进入intellij,直接找到项目的build.gradle导入即可,等待gradle编译</h3><h3 id="4-测试源码-在spring-context模块下新建测试类-代码如下-省略次要部分"><a href="#4-测试源码-在spring-context模块下新建测试类-代码如下-省略次要部分" class="headerlink" title="4.测试源码,在spring-context模块下新建测试类,代码如下(省略次要部分)"></a>4.测试源码,在spring-context模块下新建测试类,代码如下(省略次要部分)</h3><pre class="line-numbers language-bash"><code class="language-bash">public static void main<span class="token punctuation">(</span>String<span class="token punctuation">[</span><span class="token punctuation">]</span> args<span class="token punctuation">)</span><span class="token punctuation">{</span>    ClassPathXmlApplicationContext context <span class="token operator">=</span> new ClassPathXmlApplicationContext<span class="token punctuation">(</span><span class="token string">"aop.xml"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>    IocService iocService <span class="token operator">=</span> <span class="token punctuation">(</span>IocService<span class="token punctuation">)</span> context.getBean<span class="token punctuation">(</span><span class="token string">"iocService"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>    iocService.print<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre><h4 id="如果代码编译不通过-提示确实cglib的一些包-spring-cglib-repack-3-2-10-jar和spring-objenesis-repack-3-0-1-jar-则做如下操作"><a href="#如果代码编译不通过-提示确实cglib的一些包-spring-cglib-repack-3-2-10-jar和spring-objenesis-repack-3-0-1-jar-则做如下操作" class="headerlink" title="如果代码编译不通过,提示确实cglib的一些包:spring-cglib-repack-3.2.10.jar和spring-objenesis-repack-3.0.1.jar,则做如下操作:"></a>如果代码编译不通过,提示确实cglib的一些包:spring-cglib-repack-3.2.10.jar和spring-objenesis-repack-3.0.1.jar,则做如下操作:</h4><h5 id="1-intellij终端输入"><a href="#1-intellij终端输入" class="headerlink" title="1.intellij终端输入:"></a>1.intellij终端输入:</h5><pre class="line-numbers language-bash"><code class="language-bash">gradle cleanidea idea<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><p>清除已有的Intellij项目文件。</p><p>Intellij项目文件主要有三种类型。</p><ul><li><p>ipr Intellij工程文件</p></li><li><p>iml Intellij 模块文件</p></li><li><p>iws Intellij 工作区文件</p></li></ul><h6 id="spring-core-gradle-文件里在找到了两个-task-cglibRepackJar和objenesisRepackJar"><a href="#spring-core-gradle-文件里在找到了两个-task-cglibRepackJar和objenesisRepackJar" class="headerlink" title="spring-core.gradle 文件里在找到了两个 task  cglibRepackJar和objenesisRepackJar"></a>spring-core.gradle 文件里在找到了两个 task  cglibRepackJar和objenesisRepackJar</h6><h5 id="2-编译objenesisRepackJar"><a href="#2-编译objenesisRepackJar" class="headerlink" title="2.编译objenesisRepackJar"></a>2.编译objenesisRepackJar</h5><pre class="line-numbers language-bash"><code class="language-bash">gradle objenesisRepackJar<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><h5 id="3-编译cglibRepackJar"><a href="#3-编译cglibRepackJar" class="headerlink" title="3.编译cglibRepackJar"></a>3.编译cglibRepackJar</h5><pre class="line-numbers language-bash"><code class="language-bash">gradle cglibRepackJar <span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><h4 id="最终在spring-core-build-libs目录下生成jar包"><a href="#最终在spring-core-build-libs目录下生成jar包" class="headerlink" title="最终在spring-core\build\libs目录下生成jar包"></a>最终在spring-core\build\libs目录下生成jar包</h4>]]></content>
+      
+      
+      <categories>
+          
+          <category> spring </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> spring </tag>
+            
+            <tag> intellij </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>查看向zookeeper注册中心注册的服务信息</title>
+      <link href="/2019/02/26/zookeeper/"/>
+      <url>/2019/02/26/zookeeper/</url>
+      
+        <content type="html"><![CDATA[<p>查看向zookeeper注册中心注册的服务信息</p><h3 id="1-查找zookeeper安装目录"><a href="#1-查找zookeeper安装目录" class="headerlink" title="1.查找zookeeper安装目录:"></a>1.查找zookeeper安装目录:</h3><pre class="line-numbers language-bash"><code class="language-bash"><span class="token function">find</span> / -name zookeeper<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><h3 id="2-进入到zookeeper的bin目录"><a href="#2-进入到zookeeper的bin目录" class="headerlink" title="2.进入到zookeeper的bin目录"></a>2.进入到zookeeper的bin目录</h3><h3 id="3-执行zkCli-sh-命令"><a href="#3-执行zkCli-sh-命令" class="headerlink" title="3.执行zkCli.sh 命令"></a>3.执行zkCli.sh 命令</h3><pre class="line-numbers language-bash"><code class="language-bash">./zkCli.sh如果要远程连接zk,则执行./zkCli.sh -server ip:port<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre><h3 id="4-查看有哪些zookeeper节点；"><a href="#4-查看有哪些zookeeper节点；" class="headerlink" title="4.查看有哪些zookeeper节点；"></a>4.查看有哪些zookeeper节点；</h3><pre class="line-numbers language-bash"><code class="language-bash"><span class="token function">ls</span> /<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><h3 id="5-查看dubbo接口的信息"><a href="#5-查看dubbo接口的信息" class="headerlink" title="5.查看dubbo接口的信息"></a>5.查看dubbo接口的信息</h3><pre class="line-numbers language-bash"><code class="language-bash"><span class="token function">ls</span> /dubbo 查看到许多服务其中有com.app.interface<span class="token function">ls</span> /dubbo/com.app.interface/consuemrs 查看注册的消费者<span class="token function">ls</span> /dubbo/com.app.interface/providers 查看注册的生产者<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>]]></content>
+      
+      
+      <categories>
+          
+          <category> zookeeper </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> zookeeper </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>hexo撰写文章</title>
+      <link href="/2019/02/22/markdown/"/>
+      <url>/2019/02/22/markdown/</url>
+      
+        <content type="html"><![CDATA[<p>博客搭建完了,这篇文章讲述如何撰写文章</p><h2 id="创建文章"><a href="#创建文章" class="headerlink" title="创建文章"></a>创建文章</h2><p> 在站点文件夹中打开git bash，输入如下命令创建文章，其中title为文章的标题</p><pre class="line-numbers language-bash"><code class="language-bash">hexo new <span class="token string">'title'</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><p>这时就会在source/_post目录中创建一个文件: title.md,我们所要发布的文章都是放在当前文件里<br>这时就涉及到书写的语法,接下来就开始学习撰写文章的语法–Markdown</p><h2 id="编写文章（基于Markdown）"><a href="#编写文章（基于Markdown）" class="headerlink" title="编写文章（基于Markdown）"></a>编写文章（基于Markdown）</h2><h3 id="1-Markdown简介"><a href="#1-Markdown简介" class="headerlink" title="1.Markdown简介"></a>1.Markdown简介</h3><h5 id="但是在我们正式写下我们文章的第一个文字时，我们需要了解一下什么是Markdown："><a href="#但是在我们正式写下我们文章的第一个文字时，我们需要了解一下什么是Markdown：" class="headerlink" title="但是在我们正式写下我们文章的第一个文字时，我们需要了解一下什么是Markdown："></a>但是在我们正式写下我们文章的第一个文字时，我们需要了解一下什么是Markdown：</h5><pre class="line-numbers language-bash"><code class="language-bash">Markdown是一种可以使用普通文本编辑器编写的标记语言，通过简单的标记语法，它可以使普通文本内容具有一定的格式<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><h5 id="基于Markdown的简洁性，它已经成为了目前世界上最流行的用于书写博客的语言。"><a href="#基于Markdown的简洁性，它已经成为了目前世界上最流行的用于书写博客的语言。" class="headerlink" title="基于Markdown的简洁性，它已经成为了目前世界上最流行的用于书写博客的语言。"></a>基于Markdown的简洁性，它已经成为了目前世界上最流行的用于书写博客的语言。</h5><h3 id="2-Markdown语法"><a href="#2-Markdown语法" class="headerlink" title="2.Markdown语法"></a>2.Markdown语法</h3><h4 id="1-标题"><a href="#1-标题" class="headerlink" title="1.标题"></a>1.标题</h4><pre class="line-numbers language-bash"><code class="language-bash"><span class="token comment" spellcheck="true"># 一级标题</span><span class="token comment" spellcheck="true">## 二级标题</span><span class="token comment" spellcheck="true">### 三级标题</span><span class="token comment" spellcheck="true">#### 四级标题</span><span class="token comment" spellcheck="true">##### 五级标题</span><span class="token comment" spellcheck="true">###### 六级标题</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><h4 id="2-粗体、斜体、删除线和下划线"><a href="#2-粗体、斜体、删除线和下划线" class="headerlink" title="2.粗体、斜体、删除线和下划线"></a>2.粗体、斜体、删除线和下划线</h4><pre class="line-numbers language-bash"><code class="language-bash">*斜体***粗体*****加粗斜体***~~删除线~~<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre><h4 id="3-引用块"><a href="#3-引用块" class="headerlink" title="3.引用块"></a>3.引用块</h4><pre class="line-numbers language-bash"><code class="language-bash"><span class="token operator">></span> 文字引用<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><h4 id="4-代码块"><a href="#4-代码块" class="headerlink" title="4.代码块"></a>4.代码块</h4><pre class="line-numbers language-bash"><code class="language-bash"><span class="token variable"><span class="token variable">`</span>行内代码<span class="token variable">`</span></span> *``<span class="token variable"><span class="token variable">`</span>*多行代码多行代码*<span class="token variable">`</span></span>``*<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre><h4 id="5-公式块"><a href="#5-公式块" class="headerlink" title="5.公式块"></a>5.公式块</h4><pre class="line-numbers language-bash"><code class="language-bash">$$数学公式$$<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre><h4 id="6-分割线"><a href="#6-分割线" class="headerlink" title="6.分割线"></a>6.分割线</h4><pre class="line-numbers language-bash"><code class="language-bash">方法一：---方法二：+++方法三：***<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre><h4 id="7-列表"><a href="#7-列表" class="headerlink" title="7.列表"></a>7.列表</h4><pre class="line-numbers language-bash"><code class="language-bash">1. 有序列表项* 无序列表项+ 无序列表项<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre><h4 id="8-表格"><a href="#8-表格" class="headerlink" title="8.表格"></a>8.表格</h4><pre class="line-numbers language-bash"><code class="language-bash">表头1<span class="token operator">|</span>表头2-<span class="token operator">|</span>-<span class="token operator">|</span>-内容11<span class="token operator">|</span>内容12内容21<span class="token operator">|</span>内容22<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre><h4 id="9-超链接"><a href="#9-超链接" class="headerlink" title="9.超链接"></a>9.超链接</h4><pre class="line-numbers language-bash"><code class="language-bash">方法一：<span class="token punctuation">[</span>链接文字<span class="token punctuation">]</span><span class="token punctuation">(</span>链接地址 <span class="token string">"链接描述"</span><span class="token punctuation">)</span>例如：<span class="token punctuation">[</span>我的博客<span class="token punctuation">]</span><span class="token punctuation">(</span>https://jamhui.gitee.io <span class="token string">"我的博客"</span><span class="token punctuation">)</span>方法二：<span class="token operator">&lt;</span>链接地址<span class="token operator">></span>例如：<span class="token operator">&lt;</span>https://jamhui.gitee.io<span class="token operator">></span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre><h4 id="10-图片"><a href="#10-图片" class="headerlink" title="10.图片"></a>10.图片</h4><pre class="line-numbers language-bash"><code class="language-bash"><span class="token operator">!</span><span class="token punctuation">[</span>图片文字<span class="token punctuation">]</span> <span class="token punctuation">(</span>图片地址 <span class="token string">"图片描述"</span><span class="token punctuation">)</span>例如：<span class="token operator">!</span><span class="token punctuation">[</span>示例图片<span class="token punctuation">]</span> <span class="token punctuation">(</span>https://www.example.com/example.PNG <span class="token string">"示例图片"</span><span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre><h3 id="3-Markdown高级语法"><a href="#3-Markdown高级语法" class="headerlink" title="3.Markdown高级语法"></a>3.Markdown高级语法</h3><h4 id="1-模板设置"><a href="#1-模板设置" class="headerlink" title="1.模板设置"></a>1.模板设置</h4><p>当我们使用命令 hexo new “title” 去创建我们的文章时，Hexo 会根据 /scaffolds/post.md 文件对新建文件进行初始化，换言之，/scaffolds/post.md 文件就是创建新文章的模板，所以我们可以修改它来适应自己的写作习惯，一个简单的示例如下：</p><pre class="line-numbers language-bash"><code class="language-bash">title: <span class="token punctuation">{</span><span class="token punctuation">{</span> title <span class="token punctuation">}</span><span class="token punctuation">}</span>date: <span class="token punctuation">{</span><span class="token punctuation">{</span> <span class="token function">date</span> <span class="token punctuation">}</span><span class="token punctuation">}</span>tags: categories: <span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre><h4 id="2-头部设置"><a href="#2-头部设置" class="headerlink" title="2.头部设置"></a>2.头部设置</h4><p>在每一篇博客文章的开头都会有对文章的说明文字，叫做 文章头部，文章的头部除了可以设置文章标题、发布日期等基础信息外，还可以对文章添加标签、分类等，一个简单的示例如下</p><pre class="line-numbers language-bash"><code class="language-bash">title: Titledate: YYYY-MM-DD HH:MM:SStags: <span class="token punctuation">[</span>tag1, tag2, <span class="token punctuation">..</span>.<span class="token punctuation">]</span>categories: category<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre><p><strong><em> 注意，属性和属性值之间必须有一个空格，否则会解析错误 </em></strong></p><h4 id="3-首页显示"><a href="#3-首页显示" class="headerlink" title="3.首页显示"></a>3.首页显示</h4><p>在 Hexo 框架搭建的博客网站首页会显示文章的内容（默认显示文章的全部内容），如果当文章太长的时候就会显得十分冗余，所以我们有必要对其进行精简，只需在文章中使用<a id="more"></a>标志，表示只会显示标志前面的内容</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> hexo </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> hexo </tag>
+            
+            <tag> markdown </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>hexo使用-linux搭建</title>
+      <link href="/2019/02/22/hexo/"/>
+      <url>/2019/02/22/hexo/</url>
+      
+        <content type="html"><![CDATA[<p>对于第一次搭建个人博客hexo的笔记</p><h2 id="环境要求"><a href="#环境要求" class="headerlink" title="环境要求"></a>环境要求</h2><h3 id="Git"><a href="#Git" class="headerlink" title="Git"></a>Git</h3><h3 id="NodeJs"><a href="#NodeJs" class="headerlink" title="NodeJs"></a>NodeJs</h3><h4 id="先安装了Git-和-NodeJS-推荐使用cnpm"><a href="#先安装了Git-和-NodeJS-推荐使用cnpm" class="headerlink" title="先安装了Git 和 NodeJS (推荐使用cnpm)"></a>先安装了Git 和 NodeJS (推荐使用cnpm)</h4><h4 id="Git安装教程"><a href="#Git安装教程" class="headerlink" title="Git安装教程"></a><a href="https://www.liaoxuefeng.com/wiki/0013739516305929606dd18361248578c67b8067c8c017b000/00137396287703354d8c6c01c904c7d9ff056ae23da865a000" target="_blank" rel="noopener">Git安装教程</a></h4><h4 id="Nodejs安装教程"><a href="#Nodejs安装教程" class="headerlink" title="Nodejs安装教程"></a><a href="https://www.runoob.com/nodejs/nodejs-install-setup.html" target="_blank" rel="noopener">Nodejs安装教程</a></h4><h4 id="cnpm使用教程"><a href="#cnpm使用教程" class="headerlink" title="cnpm使用教程"></a><a href="https://xiuxiuing.gitee.io/blog/2018/08/25/cnpm/" target="_blank" rel="noopener">cnpm使用教程</a></h4><h2 id="开始搭建"><a href="#开始搭建" class="headerlink" title="开始搭建"></a>开始搭建</h2><h3 id="1-安装Hexo"><a href="#1-安装Hexo" class="headerlink" title="1.安装Hexo"></a>1.安装Hexo</h3><h4 id="打开-shell-终端，输入命令："><a href="#打开-shell-终端，输入命令：" class="headerlink" title="打开 shell 终端，输入命令："></a>打开 shell 终端，输入命令：</h4><pre class="line-numbers language-bash"><code class="language-bash"><span class="token function">npm</span> <span class="token function">install</span> -g hexo<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><h3 id="2-初始化Hexo"><a href="#2-初始化Hexo" class="headerlink" title="2.初始化Hexo"></a>2.初始化Hexo</h3><h4 id="在系统里新建存放hexo项目的文件夹-并进入到该文件夹-输入命令"><a href="#在系统里新建存放hexo项目的文件夹-并进入到该文件夹-输入命令" class="headerlink" title="在系统里新建存放hexo项目的文件夹,并进入到该文件夹,输入命令:"></a>在系统里新建存放hexo项目的文件夹,并进入到该文件夹,输入命令:</h4><pre class="line-numbers language-bash"><code class="language-bash">hexo init<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><h4 id="生成文件目录"><a href="#生成文件目录" class="headerlink" title="生成文件目录"></a>生成文件目录</h4><pre class="line-numbers language-bash"><code class="language-bash"><span class="token punctuation">[</span>root@jamhui blog<span class="token punctuation">]</span><span class="token comment" spellcheck="true"># ls</span>_config.yml  debug.log     package.json       public     <span class="token function">source</span>db.json      node_modules  package-lock.json  scaffolds  themes<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre><h3 id="3-本地预览博客"><a href="#3-本地预览博客" class="headerlink" title="3.本地预览博客"></a>3.本地预览博客</h3><h4 id="编译项目，输入命令："><a href="#编译项目，输入命令：" class="headerlink" title="编译项目，输入命令："></a>编译项目，输入命令：</h4><pre class="line-numbers language-bash"><code class="language-bash">hexo g<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><h4 id="运行项目，输入命令："><a href="#运行项目，输入命令：" class="headerlink" title="运行项目，输入命令："></a>运行项目，输入命令：</h4><pre class="line-numbers language-bash"><code class="language-bash">hexo s<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><p>在浏览器中输入ip:4000/`就可以看到效果啦</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> hexo </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> hexo </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>Hello World</title>
+      <link href="/2019/02/21/hello-world/"/>
+      <url>/2019/02/21/hello-world/</url>
+      
+        <content type="html"><![CDATA[<p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p><h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><pre class="line-numbers language-bash"><code class="language-bash">$ hexo new <span class="token string">"My New Post"</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p><h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><pre class="line-numbers language-bash"><code class="language-bash">$ hexo server<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p><h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><pre class="line-numbers language-bash"><code class="language-bash">$ hexo generate<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p><h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><pre class="line-numbers language-bash"><code class="language-bash">$ hexo deploy<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="noopener">Deployment</a></p>]]></content>
+      
+      
+      
+    </entry>
+    
+    
+  
+  
+</search>

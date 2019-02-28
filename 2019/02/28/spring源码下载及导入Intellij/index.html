@@ -349,6 +349,20 @@
                 </div>
 
                 
+                    
+                    <div class="info-break-policy">
+                        <i class="fa fa-file-word-o fa-fw"></i>文章字数:&nbsp;&nbsp;
+                        303
+                    </div>
+                    
+
+                    
+                    <div class="info-break-policy">
+                        <i class="fa fa-clock-o fa-fw"></i>阅读时长:&nbsp;&nbsp;
+                        1 分
+                    </div>
+                    
+                
 				
 				
                     <div id="busuanzi_container_page_pv" class="info-break-policy">
@@ -363,10 +377,10 @@
             <div id="articleContent">
                 <h3 id="1-去git上下载spring-framework"><a href="#1-去git上下载spring-framework" class="headerlink" title="1.去git上下载spring-framework:"></a>1.去git上<a href="https://github.com/spring-projects/spring-framework" target="_blank" rel="noopener">下载</a>spring-framework:</h3><pre class="line-numbers language-bash"><code class="language-bash"><span class="token function">git</span> clone https://github.com/spring-projects/spring-framework.git
 <span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-<h4 id="由于网络原因-据说需要科学上网-没下载成功-但通过download-zip方式下载成功-如图"><a href="#由于网络原因-据说需要科学上网-没下载成功-但通过download-zip方式下载成功-如图" class="headerlink" title="由于网络原因(据说需要科学上网),没下载成功,但通过download zip方式下载成功,如图:"></a>由于网络原因(据说需要科学上网),没下载成功,但通过download zip方式下载成功,如图:</h4><p><img src="../../image/spring_download.png" alt="图片"></p>
+<h4 id="由于网络原因-据说需要科学上网-没下载成功-但通过download-zip方式下载成功-如图"><a href="#由于网络原因-据说需要科学上网-没下载成功-但通过download-zip方式下载成功-如图" class="headerlink" title="由于网络原因(据说需要科学上网),没下载成功,但通过download zip方式下载成功,如图:"></a>由于网络原因(据说需要科学上网),没下载成功,但通过download zip方式下载成功,如图:</h4><p><img src="/image/spring_download.png" alt></p>
 <h3 id="2-配置gradle-已配置的跳过"><a href="#2-配置gradle-已配置的跳过" class="headerlink" title="2.配置gradle(已配置的跳过)"></a>2.配置gradle(已配置的跳过)</h3><h4 id="2-1由于源码采用gradle编译-没装gradle点击下载最新gradle"><a href="#2-1由于源码采用gradle编译-没装gradle点击下载最新gradle" class="headerlink" title="2.1由于源码采用gradle编译,没装gradle点击下载最新gradle"></a>2.1由于源码采用gradle编译,没装gradle点击<a href="https://gradle.org/releases/" target="_blank" rel="noopener">下载最新gradle</a></h4><h4 id="2-2配置环境变量GRADLE-HOME-path添加-GRADLE-HOME-bin"><a href="#2-2配置环境变量GRADLE-HOME-path添加-GRADLE-HOME-bin" class="headerlink" title="2.2配置环境变量GRADLE_HOME,path添加%GRADLE_HOME%\bin"></a>2.2配置环境变量GRADLE_HOME,path添加%GRADLE_HOME%\bin</h4><h4 id="2-3cmd测试"><a href="#2-3cmd测试" class="headerlink" title="2.3cmd测试"></a>2.3cmd测试</h4><pre class="line-numbers language-bash"><code class="language-bash">gradle -v
 <span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-<h4 id="2-4intellij配置gradle-如图"><a href="#2-4intellij配置gradle-如图" class="headerlink" title="2.4intellij配置gradle,如图:"></a>2.4intellij配置gradle,如图:</h4><p><img src="../../image/intellij_gradle.png" alt="gradle"></p>
+<h4 id="2-4intellij配置gradle-如图"><a href="#2-4intellij配置gradle-如图" class="headerlink" title="2.4intellij配置gradle,如图:"></a>2.4intellij配置gradle,如图:</h4><p><img src="/image/intellij_gradle.png" alt></p>
 <h3 id="3-接下来就要开始导入源码进入intellij-直接找到项目的build-gradle导入即可-等待gradle编译"><a href="#3-接下来就要开始导入源码进入intellij-直接找到项目的build-gradle导入即可-等待gradle编译" class="headerlink" title="3.接下来就要开始导入源码进入intellij,直接找到项目的build.gradle导入即可,等待gradle编译"></a>3.接下来就要开始导入源码进入intellij,直接找到项目的build.gradle导入即可,等待gradle编译</h3><h3 id="4-测试源码-在spring-context模块下新建测试类-代码如下-省略次要部分"><a href="#4-测试源码-在spring-context模块下新建测试类-代码如下-省略次要部分" class="headerlink" title="4.测试源码,在spring-context模块下新建测试类,代码如下(省略次要部分)"></a>4.测试源码,在spring-context模块下新建测试类,代码如下(省略次要部分)</h3><pre class="line-numbers language-bash"><code class="language-bash">public static void main<span class="token punctuation">(</span>String<span class="token punctuation">[</span><span class="token punctuation">]</span> args<span class="token punctuation">)</span><span class="token punctuation">{</span>
     ClassPathXmlApplicationContext context <span class="token operator">=</span> new ClassPathXmlApplicationContext<span class="token punctuation">(</span><span class="token string">"aop.xml"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
     IocService iocService <span class="token operator">=</span> <span class="token punctuation">(</span>IocService<span class="token punctuation">)</span> context.getBean<span class="token punctuation">(</span><span class="token string">"iocService"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
@@ -541,34 +555,268 @@
     
 
     
-        <div class="disqus-card card" data-aos="fade-up">
-    <div id="disqus_thread" class="card-content">
-        <noscript>Please enable JavaScript to view the
-            <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a>
-        </noscript>
-    </div>
+
+    
+
+    
+        <style>
+    .valine-card {
+        margin: 1.5rem auto;
+    }
+
+    .valine-card .card-content {
+        padding: 20px 20px 5px 20px;
+    }
+
+    #vcomments input[type=text],
+    #vcomments input[type=email],
+    #vcomments input[type=url],
+    #vcomments textarea {
+        box-sizing: border-box;
+    }
+
+    #vcomments p {
+        margin: 2px 2px 10px;
+        font-size: 1.05rem;
+        line-height: 1.78rem;
+    }
+
+    #vcomments blockquote p {
+        text-indent: 0.2rem;
+    }
+
+    #vcomments a {
+        padding: 0 2px;
+        color: #42b983;
+        font-weight: 500;
+        text-decoration: underline;
+    }
+
+    #vcomments img {
+        max-width: 100%;
+        height: auto;
+        cursor: pointer;
+    }
+
+    #vcomments ol li {
+        list-style-type: decimal;
+    }
+
+    #vcomments ol,
+    ul {
+        display: block;
+        padding-left: 2em;
+        word-spacing: 0.05rem;
+    }
+
+    #vcomments ul li,
+    ol li {
+        display: list-item;
+        line-height: 1.8rem;
+        font-size: 1rem;
+    }
+
+    #vcomments ul li {
+        list-style-type: disc;
+    }
+
+    #vcomments ul ul li {
+        list-style-type: circle;
+    }
+
+    #vcomments table, th, td {
+        padding: 12px 13px;
+        border: 1px solid #dfe2e5;
+    }
+
+    #vcomments table, th, td {
+        border: 0;
+    }
+
+    table tr:nth-child(2n), thead {
+        background-color: #fafafa;
+    }
+
+    #vcomments table th {
+        background-color: #f2f2f2;
+        min-width: 80px;
+    }
+
+    #vcomments table td {
+        min-width: 80px;
+    }
+
+    #vcomments h1 {
+        font-size: 1.85rem;
+        font-weight: bold;
+        line-height: 2.2rem;
+    }
+
+    #vcomments h2 {
+        font-size: 1.65rem;
+        font-weight: bold;
+        line-height: 1.9rem;
+    }
+
+    #vcomments h3 {
+        font-size: 1.45rem;
+        font-weight: bold;
+        line-height: 1.7rem;
+    }
+
+    #vcomments h4 {
+        font-size: 1.25rem;
+        font-weight: bold;
+        line-height: 1.5rem;
+    }
+
+    #vcomments h5 {
+        font-size: 1.1rem;
+        font-weight: bold;
+        line-height: 1.4rem;
+    }
+
+    #vcomments h6 {
+        font-size: 1rem;
+        line-height: 1.3rem;
+    }
+
+    #vcomments p {
+        font-size: 1rem;
+        line-height: 1.5rem;
+    }
+
+    #vcomments hr {
+        margin: 12px 0;
+        border: 0;
+        border-top: 1px solid #ccc;
+    }
+
+    #vcomments blockquote {
+        margin: 15px 0;
+        border-left: 5px solid #42b983;
+        padding: 1rem 0.8rem 0.3rem 0.8rem;
+        color: #666;
+        background-color: rgba(66, 185, 131, .1);
+    }
+
+    #vcomments pre {
+        font-family: monospace, monospace;
+        padding: 1.2em;
+        margin: .5em 0;
+        background: #272822;
+        overflow: auto;
+        border-radius: 0.3em;
+        tab-size: 4;
+    }
+
+    #vcomments code {
+        font-family: monospace, monospace;
+        padding: 1px 3px;
+        font-size: 0.92rem;
+        color: #e96900;
+        background-color: #f8f8f8;
+        border-radius: 2px;
+    }
+
+    #vcomments pre code {
+        font-family: monospace, monospace;
+        padding: 0;
+        color: #e8eaf6;
+        background-color: #272822;
+    }
+
+    #vcomments pre[class*="language-"] {
+        padding: 1.2em;
+        margin: .5em 0;
+    }
+
+    #vcomments code[class*="language-"],
+    pre[class*="language-"] {
+        color: #e8eaf6;
+    }
+
+    #vcomments [type="checkbox"]:not(:checked), [type="checkbox"]:checked {
+        position: inherit;
+        margin-left: -1.3rem;
+        margin-right: 0.4rem;
+        margin-top: -1px;
+        vertical-align: middle;
+        left: unset;
+        visibility: visible;
+    }
+
+    #vcomments b,
+    strong {
+        font-weight: bold;
+    }
+
+    #vcomments dfn {
+        font-style: italic;
+    }
+
+    #vcomments small {
+        font-size: 85%;
+    }
+
+    #vcomments cite {
+        font-style: normal;
+    }
+
+    #vcomments mark {
+        background-color: #fcf8e3;
+        padding: .2em;
+    }
+
+    #vcomments table, th, td {
+        padding: 12px 13px;
+        border: 1px solid #dfe2e5;
+    }
+
+    table tr:nth-child(2n), thead {
+        background-color: #fafafa;
+    }
+
+    #vcomments table th {
+        background-color: #f2f2f2;
+        min-width: 80px;
+    }
+
+    #vcomments table td {
+        min-width: 80px;
+    }
+
+    #vcomments [type="checkbox"]:not(:checked), [type="checkbox"]:checked {
+        position: inherit;
+        margin-left: -1.3rem;
+        margin-right: 0.4rem;
+        margin-top: -1px;
+        vertical-align: middle;
+        left: unset;
+        visibility: visible;
+    }
+</style>
+
+<div class="card valine-card" data-aos="fade-up">
+    <div id="vcomments" class="card-content"></div>
 </div>
 
-<script type="text/javascript">
-    disqus_config = function () {
-        this.page.url = 'https://jamhui.gitee.io/2019/02/28/spring源码下载及导入Intellij/';
-        this.page.identifier = '/2019/02/28/spring源码下载及导入Intellij/';
-        this.page.title = 'spring源码下载及导入Intellij';
-    };
-    let disqus_shortname = '';
-
-    (function () { // DON'T EDIT BELOW THIS LINE
-        let d = document, s = d.createElement('script');
-        // 如：s.src = 'https://blinkfox.disqus.com/embed.js';
-        s.src = '//' + disqus_shortname + '.disqus.com/embed.js';
-        s.setAttribute('data-timestamp', +new Date());
-        (d.head || d.body).appendChild(s);
-    })();
+<script src="/libs/valine/av-min.js"></script>
+<script src="/libs/valine/Valine.min.js"></script>
+<script>
+    new Valine({
+        el: '#vcomments',
+        appId: '0trxfuvEIhMjQYSQtCywQNzb-gzGzoHsz',
+        appKey: 'kvBvITGpeOWbPYP6alHkDX5L',
+        notify: 'false' === 'true',
+        verify: 'false' === 'true',
+        visitor: 'true' === 'true',
+        avatar: 'mm',
+        pageSize: '10',
+        lang: 'zh-cn',
+        placeholder: 'just go go'
+    });
 </script>
-    
-
-    
-
     
 
     
@@ -740,6 +988,9 @@
             <a href="https://hexo.io/" target="_blank">Hexo</a> 的
             <a href="https://github.com/blinkfox/hexo-theme-matery" target="_blank">hexo-theme-matery</a>主题搭建.
 
+            
+                &nbsp;<i class="fa fa-area-chart"></i>&nbsp;站点总字数:&nbsp;
+                <span class="white-color">1.4k</span>
             
 
             
