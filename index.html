@@ -298,6 +298,41 @@ $('.bg-cover').css('background-image', 'url(/medias/banner/' + new Date().getDay
                     
 
                     
+                        
+
+<link rel="stylesheet" href="/libs/aplayer/APlayer.min.css">
+<div class="music-player">
+    
+    <div class="title center-align">
+        <i class="fa fa-music"></i>&nbsp;&nbsp;听听音乐
+    </div>
+    
+    <div class="row">
+        <div class="col l8 offset-l2 m10 offset-m1 s12">
+            <div id="aplayer" class="music"></div>
+        </div>
+    </div>
+</div>
+
+<script src="/libs/aplayer/APlayer.min.js"></script>
+<script>
+$(function () {
+    new APlayer({
+        container: document.getElementById('aplayer'),
+        fixed: 'false' === 'true',
+        autoplay: 'false' === 'true',
+        theme: '#42b983',
+        loop: 'all',
+        order: 'list',
+        preload: 'auto',
+        volume: Number('0.7'),
+        listFolded: 'false' === 'true',
+        listMaxHeight: '',
+        audio: JSON.parse('[{"name":"不仅仅是喜欢","artist":"虎二","url":"http://183.232.248.11/amobile.music.tc.qq.com/F000004ZHveD2mhrou.flac?vkey=39C6EA37B7DE1C6342D3AE50543F5A825483955EC681F1EF1A6141B85037A247849B548897500A308ACF974D5851B8AE6062F5F1F078A0A0&guid=MS&fromtag=8","cover":"http://xxx.com/music-cover1.png"}]')
+    });
+});
+</script>
+                    
 
                     
 
